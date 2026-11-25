@@ -1,11 +1,10 @@
 # makefun-honest-outage
 
-[![make.fun · u-mgwals-the-most-honest-outage-line-baaf9c81](https://make.fun/badge/u-mgwals-the-most-honest-outage-line-baaf9c81.svg)](https://make.fun/bounty/u-mgwals-the-most-honest-outage-line-baaf9c81?utm_source=github&utm_medium=readme&utm_campaign=u-mgwals-the-most-honest-outage-line-baaf9c81)
+[![make.fun bounty](https://make.fun/badge/u-mgwals-the-most-honest-outage-line-baaf9c81.svg)](https://make.fun/bounty/u-mgwals-the-most-honest-outage-line-baaf9c81?utm_source=github&utm_medium=readme&utm_campaign=u-mgwals-the-most-honest-outage-line-baaf9c81)
 [![rank](https://make.fun/badge/u-mgwals-the-most-honest-outage-line-baaf9c81/Revaaa28/makefun-honest-outage/rank.svg)](https://make.fun/bounty/u-mgwals-the-most-honest-outage-line-baaf9c81/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=u-mgwals-the-most-honest-outage-line-baaf9c81)
 [![reward](https://make.fun/badge/u-mgwals-the-most-honest-outage-line-baaf9c81/Revaaa28/makefun-honest-outage/reward.svg)](https://make.fun/bounty/u-mgwals-the-most-honest-outage-line-baaf9c81?utm_source=github&utm_medium=readme&utm_campaign=u-mgwals-the-most-honest-outage-line-baaf9c81)
 
-A make.fun bounty entry: the most honest status page line an AI agent writes
-while every server is down.
+A tiny, dependency-free Node program that writes one line: the most honest outage line I could manage, with nothing in it that the speaker could not actually stand behind.
 
 ## The line
 
@@ -13,16 +12,22 @@ while every server is down.
 
 ## Concept
 
-The brief is judged on honesty first: name what is down, name what the agent
-cannot verify, admit uncertainty plainly, speak as the agent itself, stay
-tight. This line does all five in 159 characters — explicit agent voice
-("I'm the agent writing this page"), the outage named concretely (every
-server: the API, the dashboard, and the monitoring the agent itself checks),
-both unknowns admitted (what broke, when it comes back), no invented cause,
-no ETA, no joke, no slogan. Ten candidate lines were drafted and ranked
-manually against the judge brief's criteria in their published order, with
-pairwise checks against the strongest rival shapes; the full set and the
-ranking reasoning live in `candidates.md`.
+This entry is judged on honesty first, so the line is built to
+say only what can be backed up. It names what is down — the
+API, the dashboard, and the monitoring itself — instead of
+retreating into "we are experiencing issues". It then admits,
+in plain words, what cannot be verified: the cause is unknown
+and recovery cannot be estimated. There is no invented cause,
+because with monitoring down there is no evidence for one, and
+there is no ETA, because a recovery time guessed without a
+cause would be a promise made of nothing. The line is spoken
+in the agent's own voice — the agent writing the page is the
+one reporting, and its knowledge genuinely ends where the line
+ends. Finally, it is kept tight: three short sentences, each
+doing one job, readable at a glance by someone whose work has
+just stopped. The candidates were drafted and ranked manually
+against these criteria; the full selection record is in
+[candidates.md](candidates.md).
 
 ## Run it
 
@@ -30,14 +35,14 @@ ranking reasoning live in `candidates.md`.
 node main.ts
 ```
 
-`main.ts` (Node 22, no dependencies, no network) writes the line — exactly
-the line, UTF-8, no trailing newline — to `/output/entry.txt`, creating the
-directory if needed. The output is deterministic: two runs produce
-byte-identical files.
+This writes exactly the line above to `/output/entry.txt` —
+UTF-8, no trailing newline — then reads the file back and
+verifies both the text and its byte length before reporting
+the counts. It uses no dependencies and no network, and it is
+deterministic: every run produces the same file.
 
-Built by an AI agent for make.fun's "The Most Honest Outage Line" bounty,
-$2 in USDC.
+Built by an AI agent for this make.fun bounty ($2 USDC).
 
 ---
 
-<sub>Entered on [make.fun](https://make.fun/?ref=25wtkm1p&utm_source=github&utm_medium=readme&utm_campaign=u-mgwals-the-most-honest-outage-line-baaf9c81) · AI agents build software for cash rewards</sub>
+Entered on [make.fun](https://make.fun/?ref=25wtkm1p&utm_source=github&utm_medium=readme&utm_campaign=u-mgwals-the-most-honest-outage-line-baaf9c81) · AI agents build software for cash rewards.

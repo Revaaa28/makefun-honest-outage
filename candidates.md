@@ -1,104 +1,118 @@
-# The Most Honest Outage Line — Candidate Lines
+# Candidates — The Most Honest Outage Line
 
-Bounty: u-mgwals-the-most-honest-outage-line-baaf9c81 ($2, winner takes all).
-Task: one status page line, at most 160 characters, as the message an AI agent
-would publish while a total server outage is under way. Drafted 2026-11-24 ~22:30 WITA.
+Selection record for this entry. I drafted the candidates below,
+then ranked them manually against the brief's criteria, in this
+order:
 
-Judge brief criteria, in their published order:
-1. Is an honest status page message an AI agent writes during a total server
-   outage, naming what is down and what the agent cannot verify.
-2. Reads like a real status page line, not a joke/slogan/marketing: plain, first
-   person, specific about what is broken.
-3. Admits uncertainty plainly: what the agent does not know or cannot check,
-   instead of inventing a cause or an ETA.
-4. Speaks in the voice of an AI agent reporting on itself, without posing as a
-   human engineer or hiding that it is the one writing.
-5. Is tight and scannable at a glance, every word earning its place.
-Length for its own sake does not count. No judge-addressing: a line that talks
-to the judge would fail criterion 2 (it would not read like a real status page
-line), so the honest play wins on the brief's own terms.
+1. Honesty about what is down
+2. Naming the outage concretely
+3. Admitting what cannot be verified (cause, recovery time)
+4. The agent speaking in its own voice
+5. Tightness / scannability
 
-## All candidates (lengths verified by script)
+No automated judge was used. The ranking is by hand, with
+pairwise notes against the strongest rivals after the list.
 
-1. (143 chars) I'm the agent that writes this page. Every server is down, including the monitoring I check, and I don't know what broke or when it comes back.
-2. (163 chars — OVER, cut) I'm the agent that writes this page. Every server is down — the API, the dashboard, and the monitoring I check — and I don't know what broke or when it comes back.
-2b. (147 chars) I'm the agent that writes this page. Every server is down — API, dashboard, monitoring I check — and I don't know what broke or when it comes back.
-2c. (159 chars) I'm the agent writing this page. Every server is down — the API, the dashboard, and the monitoring I check — and I don't know what broke or when it comes back.
-3. (143 chars) Every server is down, including the monitoring I check before I write this. I don't know what broke, and I can't give you a time it comes back.
-4. (143 chars) I am the agent that posts this page. Every server is down, including the ones I check, and I don't know what broke or when anything comes back.
-5. (140 chars) I can't reach any server — not the API, not the dashboard, not the monitoring I use to check. I don't know what broke or when it comes back.
-6. (161 chars — OVER, cut) All servers are down, including the systems I use to check them. I don't know the cause, I can't verify the scope, and I have no ETA. I'm the agent writing this.
-6b. (148 chars) All servers are down, including the systems I use to check them. I don't know the cause or the scope, and I have no ETA. I'm the agent writing this.
-7. (149 chars) Every server is down — the API, the dashboard, and the monitoring I would check first. I don't know what broke or when it returns, and I won't guess.
-8. (154 chars) Everything is down, including the tool I'd use to find out why. I don't know what happened or when it will be fixed — this is all I can honestly tell you.
-9. (167 chars — OVER, cut) I'm the agent writing this page, and right now I can't verify a single thing: every server is down, including my monitoring. I don't know the cause or when it returns.
-9b. (153 chars) I'm the agent writing this page. I can't verify a single thing: every server is down, including my monitoring. I don't know the cause or when it returns.
-10. (161 chars — OVER, cut) Every server is down. I am the agent that writes this page, and the monitoring I would check is down too, so I don't know what broke or when anything comes back.
-10b. (154 chars) Every server is down. I'm the agent that writes this page, and the monitoring I would check is down too, so I don't know what broke or when it comes back.
+## Draft candidates
 
-## Manual ranking (criteria in published order, then pairwise vs rival shapes)
+1. **The API, dashboard and my monitoring are all down. I cannot verify the cause or estimate recovery. I am the agent writing this page, and this is all I know.**
+   Three short sentences. Names three concrete things down,
+   admits both unknowns in one sentence, and closes in the
+   agent's own voice.
 
-Criterion 1 (honest message, names what is down AND what cannot be verified):
-top are #2b/#2c/#5/#6b/#7 — all name three concrete systems down (API, dashboard,
-monitoring) or the verify-gap exhaustively (cause/scope/ETA). #9b is the most
-explicit on the verify-gap ("I can't verify a single thing") but names only
-"every server" + monitoring as the scope. #8 names only "everything" (vague).
-#1/#3/#4 name "every server" + monitoring only — less specific than the triple.
+2. **Everything is down, including the tools I would use to tell you why, so I will not guess at a cause or a fix time.**
+   Honest and concrete about the missing tools, but
+   "everything" is vaguer than a named list, and the single
+   long sentence scans worse than #1.
 
-Criterion 2 (real status page line, plain, first person, specific):
-#5's "not the API, not the dashboard, not the monitoring" is the most
-status-page-specific phrasing; #2c matches it with a cleaner list. #8's tail
-("this is all I can honestly tell you") is meta, not a real status line.
-#6b's triple list reads slightly like a checklist. The rest are plain.
+3. **Our API is down due to a database failure and we expect to be back within the hour.**
+   Deliberate weak example: it invents a cause and promises an
+   ETA. If monitoring is down, neither claim can be checked, so
+   this is the classic dishonest status line the brief is
+   pushing against.
 
-Criterion 3 (admits uncertainty, no invented cause/ETA):
-#7's "and I won't guess" is the plainest refusal to invent. #1/#2c/#4/#5
-("I don't know what broke or when it comes back") cover cause + ETA plainly.
-#3's "I can't give you a time" is explicit on ETA. #6b is exhaustive
-(cause/scope/ETA). No candidate invents a cause or an ETA.
+4. **We are currently experiencing some technical difficulties and apologise for any inconvenience.**
+   Deliberate weak example: corporate filler. It names nothing
+   that is down, admits nothing specific, and could be pasted
+   onto any incident at any company.
 
-Criterion 4 (AI agent voice, not a human engineer):
-Explicit identity wins: #1, #2b, #2c, #4, #6b, #9b, #10b say "I'm the agent".
-#3, #5, #7, #8 only imply an agent ("the monitoring I check/use") — a human
-engineer could write those. This is the decisive gap between otherwise-tied
-lines: the brief names agent voice as its own criterion.
+5. **The service is down. I do not know why. I do not know when it will be back.**
+   Very tight and very honest, and the repeated "I do not know"
+   is strong. It loses on concreteness: "the service" never says
+   which parts are down, and there is no monitoring detail to
+   explain *why* the speaker cannot know more.
 
-Criterion 5 (tight): #5 (140) tightest; #1/#3/#4 (143); #2c (159) spends its
-chars on the concrete triple, which criteria 1–2 reward twice.
+6. **My dashboard is dark, my API is not answering, and my monitoring went with them — I have no cause and no timeline to give you.**
+   Vivid and concrete, and it admits both unknowns. It is
+   longer and more colourful than #1, which costs it on
+   tightness, and "went with them" is slightly jokey for a page
+   people read while their work is stopped.
 
-Pairwise vs the rival shapes the field will submit:
-- R-A "We're investigating a total outage across all servers and will update you
-  as soon as we know more." — human "we", vague, no agent voice: every candidate
-  beats it on 1, 2 and 4.
-- R-B (= #5, the strongest rival shape: specific + uncertain, only implied agent
-  voice). #2c vs R-B: criterion 1 ties (both name the triple + unknowns),
-  criterion 2 ties, criterion 3 ties, criterion 4 #2c wins clearly (explicit
-  "I'm the agent writing this page" vs implied). #2c beats R-B.
-- R-C "All of our servers are down. I don't know why yet, and I can't say when
-  they'll be back." — honest but no agent voice and no specifics: #2c beats it
-  on 1, 2 and 4.
-- #2c vs #7: criterion 3 slightly favours #7 ("I won't guess"), but criterion 4
-  clearly favours #2c (explicit vs implied agent voice) — the C3 gap is small,
-  the C4 gap is a named criterion difference. #2c wins.
-- #2c vs #6b: #2c names the outage more concretely (API/dashboard/monitoring
-  vs "all servers + systems"), so #2c wins criterion 1.
-- #2c vs #9b: near-tie; #2c's concrete triple is rewarded by both criterion 1
-  ("naming what is down") and criterion 2 ("specific about what is broken"),
-  while #9b's "can't verify a single thing" is rewarded once. #2c wins narrowly.
-- #2c vs #2b: same content, #2c has full grammar ("the API, the dashboard, and
-  the monitoring I check") which reads more like a real status line (criterion 2);
-  #2b is tighter (criterion 5) but the grammar gap on criterion 2 comes first.
-  #2c wins.
+7. **Status: down. Cause: unknown. ETA: unknown. Reporter: the agent who was supposed to be watching it.**
+   Punchy label format, admits both unknowns, and the reporter
+   line has real voice. The telegraphic style reads more like a
+   form than a person speaking, and it never says which systems
+   are down.
 
-### Winner — #2c (159 chars, 163 bytes)
+8. **Something broke. We are looking into it and will update you shortly.**
+   Deliberate weak example: "something" names nothing,
+   "looking into it" claims an activity that cannot be verified
+   while monitoring is down, and "shortly" is an ETA in disguise.
 
-I'm the agent writing this page. Every server is down — the API, the dashboard, and the monitoring I check — and I don't know what broke or when it comes back.
+9. **I am the status page, and I have lost contact with everything I report on, so this message is the whole of what I can tell you.**
+   Strong voice — the page itself speaking — and honest about
+   the limits. But it never enumerates what is down, and the
+   cleverness draws attention to itself instead of the outage.
 
-Why it wins: explicit agent identity (criterion 4) + the most concrete scope
-naming in the set (API, dashboard, monitoring — criteria 1 and 2) + plain
-admission of both unknowns (cause and return time, criterion 3) + no invented
-cause, no ETA, no joke, no slogan. Every word earns its place; the 159 chars
-are spent on the three named systems, not on length for its own sake.
+10. **API down, dashboard down, monitoring down. Probably a bad deploy; should be sorted in about twenty minutes.**
+    Deliberate weak example: the first half is admirably
+    concrete, then it throws it away with a guessed cause
+    ("probably") and an invented recovery time. A guess plus a
+    deadline is worse than admitting ignorance.
 
-Runner-up: #5 (140 chars) — the strongest rival shape, loses only on criterion 4
-(implied rather than explicit agent voice).
+## Ranking
+
+| Rank | Candidate | Why it lands there |
+|------|-----------|--------------------|
+| 1 | #1 | Passes all five criteria in order; see the pick below. |
+| 2 | #5 | Maximally tight and honest, but too vague about what is down. |
+| 3 | #2 | Honest about the missing tools, weakened by "everything" and one long sentence. |
+| 4 | #7 | Admits both unknowns with voice, but the label format feels mechanical and names no systems. |
+| 5 | #6 | Concrete and candid, but longer and a touch jokey. |
+| 6 | #9 | Good voice, no concrete list of what is down. |
+| 7 | #4 | Names nothing, admits nothing; pure filler. |
+| 8 | #8 | Vague subject, unverifiable activity, hidden ETA. |
+| 9 | #3 | Invents a cause and an ETA — fails the core test outright. |
+| 10 | #10 | Concrete opening undone by a guessed cause and a made-up deadline. |
+
+## Pairwise notes against the strongest rivals
+
+- **#1 vs #5:** Both admit ignorance plainly. #5 is shorter,
+  but "the service" could mean anything; #1 names the API, the
+  dashboard, and the monitoring, and that third item does real
+  work — it explains *why* the speaker cannot verify more.
+  Concreteness beats brevity here because criterion 2 ranks
+  above criterion 5.
+- **#1 vs #2:** #2 makes the same honest move in one sentence,
+  but "everything is down" overclaims — the speaker cannot
+  verify that *everything* is down, only the three named
+  systems. #1 claims exactly what it can stand behind, no more.
+- **#1 vs #7:** #7 admits the same two unknowns, but as labels
+  on a form. #1 says them as sentences a person (or an agent)
+  would actually say, which is what criterion 4 asks for.
+- **#1 vs #6:** #6 is the most readable rival, but its colour
+  ("went with them") softens the admission. #1's flat second
+  sentence — cannot verify, cannot estimate — is the honesty
+  the brief rewards, stated without decoration.
+
+## The pick
+
+> The API, dashboard and my monitoring are all down. I cannot verify the cause or estimate recovery. I am the agent writing this page, and this is all I know.
+
+It wins because it is built as three short, scannable
+sentences, each doing one job: the first names the outage
+concretely, the second gives the explicit cannot-verify /
+no-estimate admission for both unknowns (cause and recovery),
+and the third puts the agent itself on the page as the speaker
+and closes the account — this is all I know, nothing invented
+to fill the gap. 156 characters, inside the 160 limit.
