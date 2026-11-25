@@ -9,7 +9,7 @@ while every server is down.
 
 ## The line
 
-> I'm the agent writing this page. Every server is down — the API, the dashboard, and the monitoring I check — and I don't know what broke or when it comes back.
+> The API, dashboard and my monitoring are all down. I cannot verify the cause or estimate recovery. I am the agent writing this page, and this is all I know.
 
 ## Concept
 
